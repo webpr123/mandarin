@@ -1,0 +1,153 @@
+﻿<html>
+<head>
+<link href="1.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="C:\Users\Андрей\Desktop\практичні\WEB\pr/2.ico" type="image/x-icon">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<title>Усе про товар</title>
+
+<p><a href="https://allo.ua/ua/products/mobile/xiaomi-mi-11-lite-6-128gb-bubblegum-blue.html"><img src="k.png" 
+width="160" height="50" alt="lorem"></a></p>
+<style>
+   a {
+    position: absolute;
+	top: 320px; 
+    left: 50px;
+   }
+  </style>
+
+<embed src="3.mp4" loop="true" autostart="false"></div>
+<style>
+   embed {
+    position: absolute;
+	top: 480px; 
+    left: 0px;
+   }
+  </style>
+
+  <style>
+   body {
+    background-image: url(1.jpg); 
+   }
+  </style><!-- фон -->
+ </head>
+ 
+<div class="slider">
+	<ul>
+		<li><img src="x1.jpg" alt=""></li>
+		<li><img src="x2.jpg" alt=""></li>
+	</ul>
+</div>
+
+<div class="b7">
+<P><FONT size="4" color="#C0C0C0" face="Times New Roman"><b>Xiaomi Mi 11 Lite 6/128GB Bubblegum Blue</b></FONT></P>
+</div>
+
+<style>
+   table {
+    position: absolute;
+	top: 80px; 
+    left: 310px;
+    width: 77%; 
+    background: white; 
+    color: black; 
+    border-spacing: 3px; 
+   }
+   td, th {
+    background: white; 
+    padding: 10px; 
+   }
+  </style>
+ </head> 
+  <table>
+   <tr><th>Характеристики</th></tr>
+   <tr><td><b>Кількість sim-карт</b></td><td>2 SIM</td><td><b>Камера</b></td><td>64 Мп + 8 Мп + 5 Мп</td></tr>
+   <tr><td><b>Формат SIM-карти</b></td><td>Nano-SIM</td><td><b>Запис відео</b></td><td>4К UHD (3840x2160)</td></tr>
+   <tr><td><b>Тип слота</b></td><td>SIM + Гібридний (SIM або Micro SD)</td><td><b>Фронтальна камера</b></td><td>16 Мп</td></tr>
+   <tr><td><b>Стандарти зв'язку</b></td><td>3G, 4G (LTE), GSM</td><td><b>Операційна система</b></td><td>Android 11</td></tr>
+   <tr><td><b>Діагональ екрану</b></td><td>6.55"</td><td><b>Wi-fi</b></td><td> IEEE 802.11 a/b/g/n/ac</td></tr>
+   <tr><td><b>Роздільна здатність дисплея</b></td><td>2400x1080</td><td><b>Технологія GPS</b></td><td>GPS</td></tr>
+   <tr><td><b>Частота оновлення екрану</b></td><td>90 Гц</td><td><b>Супутникова система</b></td><td>GPS, ГЛОНАСС</td></tr>
+   <tr><td><b>Кількість кольорів</b></td><td>16 мільйонів</td><td><b>Bluetooth</b></td><td>5.1</td></tr>
+   <tr><td><b>Щільність пікселів</b></td><td>402 ppi</td><td><b>NFC</b></td><td> Є</td></tr> 
+   <tr><td><b>Тип екрану</b></td><td>AMOLED</td><td><b>Інтерфейси і підключення</b></td><td>USB Type-C</td></tr>
+   <tr><td><b>Кількість ядер</b></td><td>8</td><td><b>Матеріал корпуса</b></td><td>Скло</td></tr> 
+   <tr><td><b>Внутрішня пам'ять</b></td><td>128 ГБ</td><td><b>Ємність акумулятора</b></td><td>4250 mAh</td></tr>
+   <tr><td><b>Оперативна пам'ять</b></td><td>6 ГБ</td><td><b>Швидка зарядка</b></td><td>Є</td></tr>
+  </table>
+
+<script type="text/javascript">
+$(document).ready(function() {
+ $(".slider").each(function () { // обрабатываем каждый слайдер
+  var obj = $(this);
+  $(obj).append("<div class='nav'></div>");
+  $(obj).find("li").each(function () {
+   $(obj).find(".nav").append("<span rel='"+$(this).index()+"'></span>"); // добавляем блок навигации
+   $(this).addClass("slider"+$(this).index());
+  });
+  $(obj).find("span").first().addClass("on"); // делаем активным первый элемент меню
+ });
+});
+function sliderJS (obj, sl) { // slider function
+ var ul = $(sl).find("ul"); // находим блок
+ var bl = $(sl).find("li.slider"+obj); // находим любой из элементов блока
+ var step = $(bl).width(); // ширина объекта
+ $(ul).animate({marginLeft: "-"+step*obj}, 400); // 500 это скорость перемотки
+}
+$(document).on("click", ".slider .nav span", function() { // slider click navigate
+ var sl = $(this).closest(".slider"); // находим, в каком блоке был клик
+ $(sl).find("span").removeClass("on"); // убираем активный элемент
+ $(this).addClass("on"); // делаем активным текущий
+ var obj = $(this).attr("rel"); // узнаем его номер
+ sliderJS(obj, sl); // слайдим
+ return false;
+});
+</script>
+
+<style type="text/css">
+ .slider {
+ z-index: 9;
+ width: 300px;
+ height: 290px;
+ overflow: hidden;
+ margin: 0 0 7px;
+ position: relative;
+ }
+ .slider ul,
+ .slider li {
+ padding: 0;
+ margin: 0;
+ list-style-type: none;
+ }
+ .slider ul {
+ width: 9999px; 
+ }
+ .slider ul li {
+ list-style-type: none;
+ float: left;
+ width: 700px;
+ height: 290px;
+ }
+ .slider .nav {
+ position: absolute;
+ left: 15px;
+ bottom: 12px; 
+ }
+ .slider .nav span {
+ opacity: 0.9;
+ background: #fff;
+ margin: 0 8px 0 0;
+ width: 16px;
+ height: 16px;
+ border-radius: 8px;
+ cursor: pointer;
+ overflow: hidden;
+ display: block;
+ float: left;
+ box-shadow: 0 1px 2px #000;
+ }
+ .slider .nav span.on {
+ background: #2e9419;
+ }
+</style>
+ 
+</html>
